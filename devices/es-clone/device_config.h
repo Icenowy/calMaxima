@@ -1,0 +1,12 @@
+#ifndef _ES_CLONE_DEVICE_CONFIG_H
+#define _ES_CLONE_DEVICE_CONFIG_H
+
+#define SCREEN_WIDTH 96
+#define SCREEN_LOGIC_HEIGHT 32
+#define SCREEN_REAL_HEIGHT 31
+#define SCREEN_SHIFT 1
+#define SCREEN_BPP 16
+
+#define FONT_NAME "MINI4x6"
+
+#endif
