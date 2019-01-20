@@ -11,7 +11,8 @@ bool event_loop_terminate;
 void event_loop()
 {
 	event_loop_terminate = false;
-	while (!event_loop_terminate && SDL_PollEvent(&event))
-	{
+	while (!event_loop_terminate) {
+		while (SDL_PollEvent(&event)) {
+		}
 	}
 }
