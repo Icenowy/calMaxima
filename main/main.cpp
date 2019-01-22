@@ -8,12 +8,6 @@
 
 SDL_Surface *mainScreen;
 
-static void clear_screen()
-{
-	SDL_FillRect(mainScreen, NULL, SDL_MapRGB(mainScreen->format, 0, 0, 0));
-	SDL_Flip(mainScreen);
-}
-
 int main(int argc, char **argv)
 {
 	if (SDL_Init(SDL_INIT_EVERYTHING) == -1) {
@@ -29,10 +23,10 @@ int main(int argc, char **argv)
 	}
 
 	clear_screen();
-
 	init_term();
 
 	event_loop();
 
+	deinit_term();
 	SDL_Quit();
 }

@@ -9,6 +9,7 @@ OBJS := main/main.o main/event_loop.o \
 	term/term.o
 
 CPPFLAGS := $(INCLUDES)
+CPPFLAGS += -Wall -g
 
 calMaxima: $(OBJS)
 	$(CXX) $(OBJS) $(LIBS) -o $@
@@ -24,3 +25,7 @@ calMaxima: $(OBJS)
 	rm -f $@.$$$$
 
 include $(OBJS:.o=.d)
+
+.PHONY: clean
+clean:
+	rm -f $(OBJS) $(OBJS:.o=.d) calMaxima

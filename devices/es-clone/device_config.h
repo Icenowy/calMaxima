@@ -9,4 +9,8 @@
 
 #define FONT_NAME "MINI4x6"
 
+#define TERM_WIDTH 24
+#define TERM_HEIGHT 5
+#define TERM_ROLLBACK_LINES 100
+
 #endif
